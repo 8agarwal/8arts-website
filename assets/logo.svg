@@ -1,0 +1,74 @@
+<svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="80" fill="#000000"/>
+  
+  <!-- Infinity Symbol with colorful wavy lines -->
+  <g transform="translate(60, 25)">
+    <!-- Infinity symbol path -->
+    <path d="M-25,0 C-25,-15 -15,-25 0,-25 C15,-25 25,-15 25,0 C25,15 15,25 0,25 C-15,25 -25,15 -25,0 Z M25,0 C25,-15 15,-25 0,-25 C-15,-25 -25,-15 -25,0 C-25,15 -15,25 0,25 C15,25 25,15 25,0 Z" 
+          fill="none" 
+          stroke="url(#wavyGradient)" 
+          stroke-width="2"/>
+    
+    <!-- Wavy lines inside infinity symbol -->
+    <g stroke-width="1" fill="none">
+      <!-- Green lines -->
+      <path d="M-20,-5 Q-10,-10 0,-5 Q10,-10 20,-5" stroke="#4CAF50" opacity="0.8"/>
+      <path d="M-20,-2 Q-10,-7 0,-2 Q10,-7 20,-2" stroke="#4CAF50" opacity="0.6"/>
+      <path d="M-20,1 Q-10,-4 0,1 Q10,-4 20,1" stroke="#4CAF50" opacity="0.4"/>
+      
+      <!-- Blue lines -->
+      <path d="M-20,4 Q-10,-1 0,4 Q10,-1 20,4" stroke="#2196F3" opacity="0.8"/>
+      <path d="M-20,7 Q-10,2 0,7 Q10,2 20,7" stroke="#2196F3" opacity="0.6"/>
+      
+      <!-- Pink lines -->
+      <path d="M-20,-8 Q-10,-13 0,-8 Q10,-13 20,-8" stroke="#E91E63" opacity="0.8"/>
+      <path d="M-20,-11 Q-10,-16 0,-11 Q10,-16 20,-11" stroke="#E91E63" opacity="0.6"/>
+      
+      <!-- Purple lines -->
+      <path d="M-20,10 Q-10,5 0,10 Q10,5 20,10" stroke="#9C27B0" opacity="0.8"/>
+      <path d="M-20,13 Q-10,8 0,13 Q10,8 20,13" stroke="#9C27B0" opacity="0.6"/>
+      
+      <!-- Yellow lines -->
+      <path d="M-20,-14 Q-10,-19 0,-14 Q10,-19 20,-14" stroke="#FFEB3B" opacity="0.8"/>
+      <path d="M-20,-17 Q-10,-22 0,-17 Q10,-22 20,-17" stroke="#FFEB3B" opacity="0.6"/>
+      
+      <!-- Orange lines -->
+      <path d="M-20,16 Q-10,11 0,16 Q10,11 20,16" stroke="#FF9800" opacity="0.8"/>
+      <path d="M-20,19 Q-10,14 0,19 Q10,14 20,19" stroke="#FF9800" opacity="0.6"/>
+      
+      <!-- Brown lines -->
+      <path d="M-20,-20 Q-10,-25 0,-20 Q10,-25 20,-20" stroke="#795548" opacity="0.8"/>
+      <path d="M-20,22 Q-10,17 0,22 Q10,17 20,22" stroke="#795548" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- Purple blob background for "Arts" text -->
+  <ellipse cx="60" cy="55" rx="35" ry="15" fill="#6A1B9A"/>
+  <ellipse cx="60" cy="55" rx="32" ry="12" fill="#8E24AA"/>
+  <ellipse cx="60" cy="55" rx="29" ry="9" fill="#AB47BC"/>
+  
+  <!-- "Arts" text -->
+  <text x="60" y="60" 
+        text-anchor="middle" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="white" 
+        style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+    Arts
+  </text>
+  
+  <!-- Gradient definition for wavy lines -->
+  <defs>
+    <linearGradient id="wavyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="16.66%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#FFEB3B;stop-opacity:1" />
+      <stop offset="83.33%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#795548;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
