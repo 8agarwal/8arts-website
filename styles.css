@@ -67,7 +67,7 @@ body {
 .hamburger {
     width: 25px;
     height: 3px;
-    background: #5d17eb;
+    background: #fff0c8;
     transition: all 0.3s ease;
     border-radius: 2px;
 }

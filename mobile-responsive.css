@@ -16,7 +16,7 @@
     .nav-toggle .hamburger {
         width: 25px;
         height: 3px;
-        background: #5d17eb;
+        background: #fff0c8;
         margin: 3px 0;
         transition: 0.3s;
         border-radius: 2px;
@@ -127,7 +127,7 @@
     .nav-toggle .hamburger {
         width: 25px;
         height: 3px;
-        background: #5d17eb;
+        background: #fff0c8;
         margin: 3px 0;
         transition: 0.3s;
         border-radius: 2px;
