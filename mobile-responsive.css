@@ -333,12 +333,16 @@
     }
     
     .gallery-preview-grid,
-    .project-gallery-grid,
     .photo-gallery-grid,
     .testimonials-grid,
     .contact-info {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .project-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
     .gallery-image,
@@ -496,6 +500,11 @@
     .project-image,
     .photo-image {
         height: 200px;
+    }
+    
+    .project-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
     
     .testimonial-item {
