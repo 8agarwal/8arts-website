@@ -24,10 +24,21 @@ function initNavigation() {
     const navToggle = document.getElementById('navToggle');
     const navDropdown = document.getElementById('navDropdown');
     
+    console.log('Initializing navigation...', { navToggle, navDropdown });
+    
     if (navToggle && navDropdown) {
-        navToggle.addEventListener('click', function() {
+        console.log('Navigation elements found, adding event listeners');
+        
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Nav toggle clicked');
             navToggle.classList.toggle('active');
             navDropdown.classList.toggle('show');
+            console.log('Classes toggled:', {
+                active: navToggle.classList.contains('active'),
+                show: navDropdown.classList.contains('show')
+            });
         });
         
         // Close dropdown when clicking outside
@@ -46,6 +57,8 @@ function initNavigation() {
                 navDropdown.classList.remove('show');
             });
         });
+    } else {
+        console.log('Navigation elements not found');
     }
 }
 
