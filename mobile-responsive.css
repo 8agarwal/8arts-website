@@ -16,7 +16,7 @@
     .nav-toggle .hamburger {
         width: 25px;
         height: 3px;
-        background: #fff0c8;
+        background: #fff0c8 !important;
         margin: 3px 0;
         transition: 0.3s;
         border-radius: 2px;
@@ -39,7 +39,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background: #fff0c8;
+        background: #fff0c8 !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         border-radius: 8px;
         min-width: 150px;
@@ -127,7 +127,7 @@
     .nav-toggle .hamburger {
         width: 25px;
         height: 3px;
-        background: #fff0c8;
+        background: #fff0c8 !important;
         margin: 3px 0;
         transition: 0.3s;
         border-radius: 2px;
@@ -150,7 +150,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background: #fff0c8;
+        background: #fff0c8 !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         border-radius: 8px;
         min-width: 150px;
@@ -622,5 +622,92 @@
     .hero .logo-image {
         height: 40px;
         width: 40px;
+    }
+}
+
+/* Contact Layout Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-main-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-container {
+        margin-top: 0;
+        padding: 0 10px;
+    }
+    
+    .contact-form-container h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-form {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-main-layout {
+        gap: 1.5rem;
+    }
+    
+    .contact-form-container {
+        padding: 0 5px;
+    }
+    
+    .contact-form-container h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .contact-form {
+        padding: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+    
+    .submit-btn {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .contact-info {
+        gap: 1rem;
     }
 }
