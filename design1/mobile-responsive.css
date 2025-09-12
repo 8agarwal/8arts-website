@@ -1,0 +1,722 @@
+/* Mobile Responsive Styles - Clean Version */
+
+/* Desktop navigation styles */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+        background: none;
+        border: none;
+        z-index: 1002;
+        position: relative;
+    }
+    
+    .nav-toggle .hamburger {
+        width: 25px;
+        height: 3px;
+        background: #fff0c8 !important;
+        margin: 3px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff0c8 !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        min-width: 150px;
+        z-index: 1000;
+        margin-top: 5px;
+    }
+    
+    .nav-dropdown.show {
+        display: block;
+    }
+    
+    .nav-dropdown .nav-link {
+        display: block;
+        padding: 12px 20px;
+        color: #5d17eb !important;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .nav-dropdown .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-dropdown .nav-link:hover {
+        background: #ee922f;
+        color: white !important;
+    }
+}
+
+/* Tablet and smaller */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .gallery-preview-grid,
+    .project-gallery-grid,
+    .photo-gallery-grid,
+    .testimonials-grid,
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content,
+    .background-content {
+        gap: 3rem;
+    }
+}
+
+/* Mobile landscape and smaller */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav {
+        padding: 1rem;
+        min-height: 70px;
+        position: relative;
+        display: block !important;
+    }
+    
+    .nav-menu {
+        position: relative;
+        display: block !important;
+    }
+    
+    .nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+        background: none;
+        border: none;
+        z-index: 1002;
+        position: relative;
+    }
+    
+    .nav-toggle .hamburger {
+        width: 25px;
+        height: 3px;
+        background: #fff0c8 !important;
+        margin: 3px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff0c8 !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        min-width: 150px;
+        z-index: 1000;
+        margin-top: 5px;
+    }
+    
+    .nav-dropdown.show {
+        display: block;
+    }
+    
+    .nav-dropdown .nav-link {
+        display: block;
+        padding: 12px 20px;
+        color: #5d17eb !important;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .nav-dropdown .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-dropdown .nav-link:hover {
+        background: #ee922f;
+        color: white;
+    }
+    
+    .logo-image {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .main,
+    .portfolio-main {
+        margin-top: 0;
+    }
+    
+    .hero {
+        padding: 80px 0 40px;
+        min-height: 70vh;
+    }
+    
+    .hero .nav {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: auto;
+        padding: 0;
+        min-height: auto;
+        z-index: 1001;
+    }
+    
+    .hero .logo {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        z-index: 1000;
+    }
+    
+    .hero .logo-image {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .gallery-preview h3,
+    .about-text h3,
+    .background-right h3,
+    .project-gallery h3,
+    .testimonials h3,
+    .contact h3 {
+        font-size: 2.5rem;
+    }
+    
+    .gallery-preview h4 {
+        font-size: 1.3rem;
+    }
+    
+    .about-content,
+    .background-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .background-left {
+        order: 2;
+    }
+    
+    .background-right {
+        order: 1;
+    }
+    
+    .background-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .background-right {
+        order: 1;
+    }
+    
+    .background-left {
+        order: 2;
+    }
+    
+    .logo-item {
+        flex-direction: row;
+        text-align: left;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+        align-items: center;
+    }
+    
+    .logo-icon {
+        font-size: 1.2rem;
+        margin-right: 0.8rem;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo-details h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .university,
+    .job-title,
+    .business-name {
+        font-size: 0.8rem;
+        margin: 0.1rem 0;
+    }
+    
+    .separator-line {
+        height: 1px;
+        margin: 0.3rem 0;
+    }
+    
+    .degree,
+    .duration,
+    .start-date {
+        font-size: 0.75rem;
+        margin: 0.1rem 0;
+    }
+    
+    .background-text {
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .background-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    
+    .gallery-preview-grid,
+    .photo-gallery-grid,
+    .testimonials-grid,
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .gallery-image,
+    .project-image,
+    .photo-image {
+        height: 250px;
+    }
+    
+    .testimonial-item {
+        padding: 1.5rem;
+    }
+    
+    .painting {
+        flex-direction: column !important;
+        margin-bottom: 40px;
+        min-height: auto;
+    }
+    
+    .painting-image,
+    .painting-info {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .placeholder-painting {
+        height: 250px;
+    }
+    
+    .painting-info h3 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .footer {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .nav {
+        padding: 0.8rem;
+        min-height: 60px;
+    }
+    
+    .logo-image {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .hero {
+        padding: 60px 0 30px;
+        min-height: 60vh;
+    }
+    
+    .hero .nav {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .hero .logo {
+        top: 15px;
+    }
+    
+    .hero .logo-image {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .gallery-preview h3,
+    .about-text h3,
+    .background-right h3,
+    .project-gallery h3,
+    .testimonials h3,
+    .contact h3 {
+        font-size: 2rem;
+    }
+    
+    .gallery-preview h4 {
+        font-size: 1.1rem;
+    }
+    
+    .about-text p,
+    .background-right p,
+    .contact-message p {
+        font-size: 0.95rem;
+    }
+    
+    .background-text {
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .background-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+    
+    .background-layout {
+        gap: 1.5rem;
+    }
+    
+    .background-left {
+        order: 2;
+    }
+    
+    .logo-icon {
+        font-size: 1rem;
+        width: 25px;
+        height: 25px;
+        margin-right: 0.6rem;
+    }
+    
+    .logo-details h4 {
+        font-size: 0.8rem;
+    }
+    
+    .university,
+    .job-title,
+    .business-name {
+        font-size: 0.7rem;
+    }
+    
+    .degree,
+    .duration,
+    .start-date {
+        font-size: 0.65rem;
+    }
+    
+    .gallery-image,
+    .project-image,
+    .photo-image {
+        height: 200px;
+    }
+    
+    .project-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .testimonial-item {
+        padding: 1rem;
+    }
+    
+    .testimonial-text p {
+        font-size: 0.9rem;
+    }
+    
+    .painting-info h3 {
+        font-size: 1.8rem;
+    }
+    
+    .painting-info p {
+        font-size: 0.9rem;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-header p {
+        font-size: 1rem;
+    }
+    
+    .placeholder-painting {
+        height: 200px;
+    }
+    
+    .placeholder-painting span {
+        font-size: 1rem;
+    }
+    
+    .placeholder-painting p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-description {
+        font-size: 0.85rem;
+    }
+    
+    .gallery-preview h3,
+    .about-text h3,
+    .background-right h3,
+    .project-gallery h3,
+    .testimonials h3,
+    .contact h3 {
+        font-size: 1.8rem;
+    }
+    
+    .gallery-preview h4 {
+        font-size: 1rem;
+    }
+    
+    .about-text p,
+    .background-right p,
+    .contact-message p {
+        font-size: 0.9rem;
+    }
+    
+    .background-text {
+        padding: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    
+    .background-text p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0.7rem;
+    }
+    
+    .gallery-image,
+    .project-image,
+    .photo-image {
+        height: 180px;
+    }
+    
+    .painting-info h3 {
+        font-size: 1.6rem;
+    }
+    
+    .painting-info p {
+        font-size: 0.85rem;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .placeholder-painting {
+        height: 180px;
+    }
+    
+    .hero {
+        padding: 50px 0 25px;
+        min-height: 50vh;
+    }
+    
+    .hero .nav {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .hero .logo {
+        top: 10px;
+    }
+    
+    .hero .logo-image {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* Contact Layout Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-main-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-container {
+        margin-top: 0;
+        padding: 0 10px;
+    }
+    
+    .contact-form-container h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-form {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-main-layout {
+        gap: 1.5rem;
+    }
+    
+    .contact-form-container {
+        padding: 0 5px;
+    }
+    
+    .contact-form-container h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .contact-form {
+        padding: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+    
+    .submit-btn {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .contact-info {
+        gap: 1rem;
+    }
+}

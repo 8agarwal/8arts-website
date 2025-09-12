@@ -196,27 +196,32 @@
     }
     
     .hero {
-        padding: 80px 0 40px;
-        min-height: 70vh;
+        padding: 60px 0 40px;
+        min-height: 100vh;
+        height: 100vh;
     }
     
-    .hero .nav {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        right: auto;
-        padding: 0;
-        min-height: auto;
-        z-index: 1001;
+    
+    .header {
+        height: 60px;
+        padding: 0 15px;
+        justify-content: flex-start;
     }
     
-    .hero .logo {
+    .header .logo {
         position: absolute;
-        top: 20px;
         left: 50%;
-        transform: translateX(-50%);
-        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
         z-index: 1000;
+    }
+    
+    .header .nav {
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: auto !important;
+        max-width: none !important;
     }
     
     .hero .logo-image {
@@ -234,6 +239,34 @@
     
     .hero-description {
         font-size: 1rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .hero-text {
+        text-align: center;
+        flex: none;
+        padding-right: 0;
+    }
+    
+    .hero-image {
+        order: -1;
+        flex: none;
+        width: 100%;
+    }
+    
+    .cover-image {
+        width: 100%;
+        height: 100vh;
+        min-height: 800px;
+        object-fit: cover;
+        border-radius: 0;
+        box-shadow: none;
     }
     
     .gallery-preview h3,
@@ -409,10 +442,6 @@
         min-height: 60vh;
     }
     
-    .hero .nav {
-        top: 15px;
-        left: 15px;
-    }
     
     .hero .logo {
         top: 15px;
@@ -433,6 +462,15 @@
     
     .hero-description {
         font-size: 0.9rem;
+    }
+    
+    .cover-image {
+        width: 100%;
+        height: 100vh;
+        min-height: 800px;
+        object-fit: cover;
+        border-radius: 0;
+        box-shadow: none;
     }
     
     .gallery-preview h3,
@@ -619,10 +657,6 @@
         min-height: 50vh;
     }
     
-    .hero .nav {
-        top: 10px;
-        left: 10px;
-    }
     
     .hero .logo {
         top: 10px;

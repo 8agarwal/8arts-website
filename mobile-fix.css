@@ -167,10 +167,6 @@ body {
 .hero {
     position: relative;
     background: #191919;
-    background-image: url('assets/hero-background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: #2c3e50;
     padding: 0;
     text-align: center;
