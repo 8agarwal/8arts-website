@@ -155,10 +155,10 @@ class FeaturedSeriesManager {
 
         seriesItem.innerHTML = `
             <div class="series-image">
-                <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy">
+                <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy" onclick="window.location.href='portfolio.html'">
             </div>
             <div class="series-text">
-                <h4>${item.title}</h4>
+                <h4 onclick="window.location.href='portfolio.html'" style="cursor: pointer;">${item.title}</h4>
                 <p>${item.description}</p>
                 ${item.meta ? `<div class="series-meta">${item.meta}</div>` : ''}
             </div>
@@ -262,18 +262,18 @@ setTimeout(() => {
                 console.log('Manual fetch successful:', data);
                 container.innerHTML = '';
                 data.forEach((item, index) => {
-                    const seriesItem = document.createElement('div');
-                    seriesItem.className = 'series-item';
-                    seriesItem.innerHTML = `
-                        <div class="series-image">
-                            <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy">
-                        </div>
-                        <div class="series-text">
-                            <h4>${item.title}</h4>
-                            <p>${item.description}</p>
-                            ${item.meta ? `<div class="series-meta">${item.meta}</div>` : ''}
-                        </div>
-                    `;
+            const seriesItem = document.createElement('div');
+            seriesItem.className = 'series-item';
+            seriesItem.innerHTML = `
+                <div class="series-image">
+                    <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy" onclick="window.location.href='portfolio.html'">
+                </div>
+                <div class="series-text">
+                    <h4 onclick="window.location.href='portfolio.html'" style="cursor: pointer;">${item.title}</h4>
+                    <p>${item.description}</p>
+                    ${item.meta ? `<div class="series-meta">${item.meta}</div>` : ''}
+                </div>
+            `;
                     container.appendChild(seriesItem);
                 });
             })

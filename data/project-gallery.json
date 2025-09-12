@@ -1,16 +1,30 @@
 [
   {
-    "id": "project_photo 2",
-    "title": "Silent Roar",
-    "description": "This piece is for every woman who refused to be silenced —\nwho chose her own path even when the world tried to hold her back.\nThe scars she carries are not from strangers but from those closest to her,\nyet she wears them with pride, turning pain into art and wounds into wisdom.\n\nShe embraces every scar, every shadow, every storm —\nbecause they made her unbreakable.\nHer silence is not weakness; it is power.\nShe roars without words, and the world listens.",
-    "image": "assets/project_photo 2.jpg",
-    "meta": "Project • 2025"
-  },
-  {
     "id": "project_photo1",
     "title": "Voices In Our Head",
     "description": "We live between silence and chaos. The black voids above and below are the moments of stillness — but inside, the center explodes with unfiltered voices. They clash, overlap, and burst with color: anger, joy, fear, dreams, doubt, hope.\n\nThis painting captures the storm of the mind — the endless dialogue within us. Some voices weigh us down, some push us forward. Together, they form the spectrum of being human.\n\nEven when the world is quiet, the voices never stop.",
     "image": "assets/project_photo1.jpg",
+    "meta": "Project • 2025"
+  },
+  {
+    "id": "project_photo2",
+    "title": "Silent Roar",
+    "description": "This piece is for every woman who refused to be silenced —\nwho chose her own path even when the world tried to hold her back.\nThe scars she carries are not from strangers but from those closest to her,\nyet she wears them with pride, turning pain into art and wounds into wisdom.\n\nShe embraces every scar, every shadow, every storm —\nbecause they made her unbreakable.\nHer silence is not weakness; it is power.\nShe roars without words, and the world listens.",
+    "image": "assets/project_photo2.jpg",
+    "meta": "Project • 2025"
+  },
+  {
+    "id": "project_photo3",
+    "title": "Silent Roar",
+    "description": "This piece is for every woman who refused to be silenced —\nwho chose her own path even when the world tried to hold her back.\nThe scars she carries are not from strangers but from those closest to her,\nyet she wears them with pride, turning pain into art and wounds into wisdom.\n\nShe embraces every scar, every shadow, every storm —\nbecause they made her unbreakable.\nHer silence is not weakness; it is power.\nShe roars without words, and the world listens.",
+    "image": "assets/project_photo3.jpg",
+    "meta": "Project • 2025"
+  },
+  {
+    "id": "project_photo4",
+    "title": "Silent Roar",
+    "description": "This piece is for every woman who refused to be silenced —\nwho chose her own path even when the world tried to hold her back.\nThe scars she carries are not from strangers but from those closest to her,\nyet she wears them with pride, turning pain into art and wounds into wisdom.\n\nShe embraces every scar, every shadow, every storm —\nbecause they made her unbreakable.\nHer silence is not weakness; it is power.\nShe roars without words, and the world listens.",
+    "image": "assets/project_photo4.jpg",
     "meta": "Project • 2025"
   }
 ]

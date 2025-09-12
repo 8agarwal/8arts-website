@@ -149,10 +149,10 @@ class ProjectGalleryManager {
 
         projectItem.innerHTML = `
             <div class="series-image">
-                <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy">
+                <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy" onclick="window.location.href='portfolio.html'">
             </div>
             <div class="series-text">
-                <h4>${item.title}</h4>
+                <h4 onclick="window.location.href='portfolio.html'" style="cursor: pointer;">${item.title}</h4>
                 <p>${item.description}</p>
                 ${item.meta ? `<div class="series-meta">${item.meta}</div>` : ''}
             </div>
@@ -267,10 +267,10 @@ setTimeout(() => {
                     projectItem.className = 'series-item';
                     projectItem.innerHTML = `
                         <div class="series-image">
-                            <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy">
+                            <img src="${item.image}" alt="${item.title}" class="gallery-image" loading="lazy" onclick="window.location.href='portfolio.html'">
                         </div>
                         <div class="series-text">
-                            <h4>${item.title}</h4>
+                            <h4 onclick="window.location.href='portfolio.html'" style="cursor: pointer;">${item.title}</h4>
                             <p>${item.description}</p>
                             ${item.meta ? `<div class="series-meta">${item.meta}</div>` : ''}
                         </div>
