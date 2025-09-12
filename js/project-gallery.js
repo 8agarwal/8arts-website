@@ -125,11 +125,21 @@ class ProjectGalleryManager {
         
         this.container.innerHTML = '';
         
-        items.forEach((item, index) => {
+        // Check if we're on the home page (limit to 2 items) or portfolio page (show all)
+        const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+        const itemsToShow = isHomePage ? items.slice(0, 2) : items;
+        
+        itemsToShow.forEach((item, index) => {
             console.log('Creating project item:', item);
             const projectItem = this.createProjectItem(item, index);
             this.container.appendChild(projectItem);
         });
+
+        // Add "Show More" button on home page if there are more than 2 items
+        if (isHomePage && items.length > 2) {
+            const showMoreButton = this.createShowMoreButton();
+            this.container.appendChild(showMoreButton);
+        }
 
         // Add loading indicator if needed
         if (items.length === 0) {
@@ -159,6 +169,58 @@ class ProjectGalleryManager {
         `;
 
         return projectItem;
+    }
+
+    /**
+     * Create the "Show More" button
+     */
+    createShowMoreButton() {
+        const buttonContainer = document.createElement('div');
+        buttonContainer.className = 'show-more-container';
+        buttonContainer.style.cssText = `
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            width: 100%;
+        `;
+
+        const button = document.createElement('button');
+        button.className = 'show-more-btn';
+        button.textContent = 'Show More';
+        button.style.cssText = `
+            background: #fed012;
+            color: black;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Carlito', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(254, 208, 18, 0.3);
+        `;
+
+        // Add hover effect
+        button.addEventListener('mouseenter', () => {
+            button.style.background = '#e6c200';
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 6px 20px rgba(254, 208, 18, 0.4)';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.style.background = '#fed012';
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = '0 4px 15px rgba(254, 208, 18, 0.3)';
+        });
+
+        // Add click handler to redirect to portfolio page
+        button.addEventListener('click', () => {
+            window.location.href = 'portfolio.html';
+        });
+
+        buttonContainer.appendChild(button);
+        return buttonContainer;
     }
 
     /**
@@ -261,7 +323,12 @@ setTimeout(() => {
             .then(data => {
                 console.log('Manual fetch successful:', data);
                 container.innerHTML = '';
-                data.forEach((item, index) => {
+                
+                // Check if we're on the home page (limit to 2 items) or portfolio page (show all)
+                const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+                const itemsToShow = isHomePage ? data.slice(0, 2) : data;
+                
+                itemsToShow.forEach((item, index) => {
                     console.log('Creating project item:', item);
                     const projectItem = document.createElement('div');
                     projectItem.className = 'series-item';
@@ -277,6 +344,42 @@ setTimeout(() => {
                     `;
                     container.appendChild(projectItem);
                 });
+
+                // Add "Show More" button on home page if there are more than 2 items
+                if (isHomePage && data.length > 2) {
+                    const buttonContainer = document.createElement('div');
+                    buttonContainer.className = 'show-more-container';
+                    buttonContainer.style.cssText = `
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 2rem;
+                        width: 100%;
+                    `;
+
+                    const button = document.createElement('button');
+                    button.className = 'show-more-btn';
+                    button.textContent = 'Show More';
+                    button.style.cssText = `
+                        background: #fed012;
+                        color: black;
+                        border: none;
+                        padding: 12px 30px;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        font-family: 'Carlito', sans-serif;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 15px rgba(254, 208, 18, 0.3);
+                    `;
+
+                    button.addEventListener('click', () => {
+                        window.location.href = 'portfolio.html';
+                    });
+
+                    buttonContainer.appendChild(button);
+                    container.appendChild(buttonContainer);
+                }
             })
             .catch(error => {
                 console.error('Manual fetch failed:', error);

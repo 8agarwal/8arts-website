@@ -579,6 +579,39 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Show More Button Styling */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.show-more-btn {
+    background: #fed012;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Carlito', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 208, 18, 0.3);
+}
+
+.show-more-btn:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 208, 18, 0.4);
+}
+
+.show-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(254, 208, 18, 0.3);
+}
+
 
 .project-gallery-grid {
     display: grid;
