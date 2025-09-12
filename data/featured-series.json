@@ -1,0 +1,23 @@
+[
+  {
+    "id": "s1_p1",
+    "title": "The Burst (Total Eclipse)",
+    "description": "The first painting begins at the breaking point.\nThe eclipse is total, and the figure erupts in raw strokes — an uncontrolled explosion of emotion. Nothing is calm, nothing is resolved. It is the moment of rupture, when shadow swallows us and everything we’ve held back bursts outward.\nHuman parallel: Those life moments when we hit rock bottom — overwhelming, chaotic, but necessary for transformation to ignite.",
+    "image": "assets/s1_p1.jpg",
+    "meta": "Series 1 • 2025"
+  },
+  {
+    "id": "s1_p2",
+    "title": "The Absorption (Half Eclipse)",
+    "description": "Here, the eclipse shifts. The figure is no longer exploding but absorbing, surrounded by a heavy, gloomy atmosphere. This is the stage of adjusting — when we begin to sit with what has happened, trying to adapt, to make sense of both the shadow and the returning light. It is uncomfortable, but it is where growth begins.\nHuman parallel: The in-between phases of life — grief, healing, self-reflection — where we are not yet free, but are learning to carry both the weight and the lessons.",
+    "image": "assets/s1_p2.jpg",
+    "meta": "Series 1 • 2025"
+  },
+  {
+    "id": "s1_p3",
+    "title": "The Release (No Eclipse)",
+    "description": "Finally, the eclipse is gone. There is no shadow, only a figure releasing energy outward. But unlike the first burst, this release is not chaos — it carries clarity. Among the strokes is white light, symbolizing action, direction, and integration.\nHuman parallel: The phase of acceptance and movement — when we release not in anger, but in strength. When we take all the darkness, all the lessons, and channel them into purposeful action.",
+    "image": "assets/s1_p3.jpg",
+    "meta": "Series 1 • 2025"
+  }
+]

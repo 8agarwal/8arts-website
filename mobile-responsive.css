@@ -457,6 +457,36 @@
         gap: 1.5rem;
     }
     
+    /* Featured Series Mobile Styles */
+    .series-item {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .series-image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .series-image .gallery-image {
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+    
+    .series-text h4 {
+        font-size: 1.5rem;
+    }
+    
+    .series-text p {
+        font-size: 1rem;
+    }
+    
     .project-gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;

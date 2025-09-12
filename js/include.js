@@ -21,45 +21,54 @@ function includeHTML() {
 
 // Initialize navigation dropdown functionality
 function initNavigation() {
-    const navToggle = document.getElementById('navToggle');
-    const navDropdown = document.getElementById('navDropdown');
-    
-    console.log('Initializing navigation...', { navToggle, navDropdown });
-    
-    if (navToggle && navDropdown) {
-        console.log('Navigation elements found, adding event listeners');
+    // Wait a bit for DOM to be fully ready
+    setTimeout(() => {
+        const navToggle = document.getElementById('navToggle');
+        const navDropdown = document.getElementById('navDropdown');
         
-        navToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Nav toggle clicked');
-            navToggle.classList.toggle('active');
-            navDropdown.classList.toggle('show');
-            console.log('Classes toggled:', {
-                active: navToggle.classList.contains('active'),
-                show: navDropdown.classList.contains('show')
+        console.log('Initializing navigation...', { navToggle, navDropdown });
+        
+        if (navToggle && navDropdown) {
+            console.log('Navigation elements found, adding event listeners');
+            
+            // Remove any existing event listeners
+            const newNavToggle = navToggle.cloneNode(true);
+            navToggle.parentNode.replaceChild(newNavToggle, navToggle);
+            
+            newNavToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Nav toggle clicked');
+                newNavToggle.classList.toggle('active');
+                navDropdown.classList.toggle('show');
+                console.log('Classes toggled:', {
+                    active: newNavToggle.classList.contains('active'),
+                    show: navDropdown.classList.contains('show')
+                });
             });
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!navToggle.contains(event.target) && !navDropdown.contains(event.target)) {
-                navToggle.classList.remove('active');
-                navDropdown.classList.remove('show');
-            }
-        });
-        
-        // Close dropdown when clicking on a link
-        const navLinks = navDropdown.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navToggle.classList.remove('active');
-                navDropdown.classList.remove('show');
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!newNavToggle.contains(event.target) && !navDropdown.contains(event.target)) {
+                    newNavToggle.classList.remove('active');
+                    navDropdown.classList.remove('show');
+                }
             });
-        });
-    } else {
-        console.log('Navigation elements not found');
-    }
+            
+            // Close dropdown when clicking on a link
+            const navLinks = navDropdown.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    newNavToggle.classList.remove('active');
+                    navDropdown.classList.remove('show');
+                });
+            });
+        } else {
+            console.log('Navigation elements not found, retrying...');
+            // Retry after a longer delay
+            setTimeout(initNavigation, 1000);
+        }
+    }, 100);
 }
 
 // Load sections when DOM is ready
