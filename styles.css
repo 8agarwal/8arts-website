@@ -511,6 +511,15 @@ body {
     align-items: center;
 }
 
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fed012;
+    font-weight: 400;
+    font-family: 'Alex Brush', cursive;
+    letter-spacing: 1px;
+}
+
 .about-text h3 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -592,6 +601,48 @@ body {
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 1.5rem;
+}
+
+/* Section Headings - All use Alex Brush font like hero title */
+h2 {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+/* Override for series-name to use Carlito font like "The Burst" */
+.gallery-preview h3.series-name {
+    font-family: 'Carlito', sans-serif !important;
+    font-weight: 400;
+    font-size: 1.8rem !important;
+}
+
+/* More specific override to ensure it works */
+section.gallery-preview h3.series-name {
+    font-family: 'Carlito', sans-serif !important;
+    font-weight: 400;
+    font-size: 1.8rem !important;
+}
+
+/* Internal Links Styling */
+.internal-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.internal-link:hover {
+    color: #c82333;
+    border-bottom: 1px solid #c82333;
+    text-decoration: none;
 }
 
 /* Show More Button Styling */
@@ -708,6 +759,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    color: #fed012;
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .testimonials h3 {
@@ -973,6 +1034,16 @@ body {
     align-items: flex-start;
     gap: 0;
     padding-left: 20px;
+}
+
+.background h2 {
+    font-size: 2.5rem;
+    color: #fed012;
+    margin-bottom: 2rem;
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .background h3 {
@@ -1372,12 +1443,23 @@ body {
     }
     
     .gallery-preview h3,
+    .about-text h2,
     .about-text h3,
+    .background h2,
     .background-right h3,
     .project-gallery h3,
+    .testimonials h2,
     .testimonials h3,
     .contact h3 {
         font-size: 2.5rem;
+    }
+    
+    .gallery-preview h3.series-name {
+        font-size: 1.8rem !important;
+    }
+    
+    section.gallery-preview h3.series-name {
+        font-size: 1.8rem !important;
     }
     
     .gallery-preview h4 {
@@ -1658,12 +1740,23 @@ body {
     }
     
     .gallery-preview h3,
+    .about-text h2,
     .about-text h3,
+    .background h2,
     .background-right h3,
     .project-gallery h3,
+    .testimonials h2,
     .testimonials h3,
     .contact h3 {
         font-size: 2.5rem;
+    }
+    
+    .gallery-preview h3.series-name {
+        font-size: 1.8rem !important;
+    }
+    
+    section.gallery-preview h3.series-name {
+        font-size: 1.8rem !important;
     }
     
     .gallery-preview h4 {
@@ -1899,5 +1992,13 @@ body {
     .placeholder-painting {
         height: 180px;
     }
+}
+
+/* FINAL OVERRIDE - Ensure series-name is always 1.8rem */
+section.gallery-preview h3.series-name,
+.gallery-preview h3.series-name {
+    font-size: 1.8rem !important;
+    font-family: 'Carlito', sans-serif !important;
+    font-weight: 400 !important;
 }
 
