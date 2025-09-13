@@ -149,6 +149,21 @@ body {
     transform: scale(1.05);
 }
 
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.logo-link:active {
+    transform: scale(0.95);
+}
+
 .logo h1 {
     font-size: 2rem;
     color: #2c3e50;
@@ -585,20 +600,25 @@ body {
     justify-content: center;
     margin-top: 2rem;
     width: 100%;
+    padding: 20px 0;
 }
 
 .show-more-btn {
     background: #fed012;
     color: black;
     border: none;
-    padding: 12px 30px;
+    padding: 15px 40px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     font-family: 'Carlito', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(254, 208, 18, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
 }
 
 .show-more-btn:hover {
@@ -1096,14 +1116,15 @@ body {
 
 /* Portfolio Page Styles */
 .portfolio-main {
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .portfolio-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 60px 0;
+    background: #fed012;
+    color: black;
+    padding: 100px 0 60px 0;
     text-align: center;
+    margin-top: 80px;
 }
 
 .portfolio-header h2 {
@@ -1115,6 +1136,96 @@ body {
 .portfolio-header p {
     font-size: 1.2rem;
     opacity: 0.9;
+}
+
+/* Portfolio-specific section colors */
+.portfolio-main .gallery {
+    background: white;
+}
+
+/* Featured Series section on portfolio page - black background */
+.portfolio-main .gallery .gallery-content:first-child {
+    background: black;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.portfolio-main .gallery .gallery-content:first-child h3 {
+    color: #fed012;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Alex Brush', cursive;
+    text-align: center;
+}
+
+.portfolio-main .gallery .gallery-content:first-child .series-name {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-family: 'Carlito', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.portfolio-main .gallery .gallery-content:first-child .series-text h4 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Carlito', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.portfolio-main .gallery .gallery-content:first-child .series-text p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Carlito', sans-serif;
+}
+
+/* Project Gallery section on portfolio page - yellow background */
+.portfolio-main .gallery .gallery-content:last-child {
+    background: #fed012;
+    padding: 60px 40px;
+    border-radius: 12px;
+}
+
+.portfolio-main .gallery .gallery-content:last-child h3 {
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Alex Brush', cursive;
+    text-align: center;
+}
+
+.portfolio-main .gallery .gallery-content:last-child .series-name {
+    color: black;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-family: 'Carlito', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.portfolio-main .gallery .gallery-content:last-child .series-text h4 {
+    color: black;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Carlito', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.portfolio-main .gallery .gallery-content:last-child .series-text p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Carlito', sans-serif;
 }
 
 /* Gallery Styles */
